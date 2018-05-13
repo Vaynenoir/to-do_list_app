@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+
+	</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="main">
+
+
+	    <div class="add_form container">   
+				
+				<!-- <input type="text" name="ListItem" placeholder="Task to do" /> -->
+				
+				
+				    <form class="col s12">
+			    			<div class="header">
+								<h2 class="header_title">To-Do App</h2>
+						    	<p class="header_description">
+						    		<em class="header_description__cursive">Track your tasks everyday with to-do app!</em>
+						    	</p>
+
+						    </div>
+						    <div class="divider"></div>
+				      <div class="row">
+				        <div class="input-field col s12">
+				          <i class="material-icons prefix">note_add</i>
+				          <input id="icon_prefix" name="ListItem" type="text" class="validate new_task" required>
+				          <label for="icon_prefix">Task to do</label>
+				        </div>
+				        <div class="input-field col s12">
+				          <i class="material-icons prefix">subject</i>
+				          <input id="icon_telephone" type="tel" name="task_description" class="validate" required>
+				          <label for="icon_telephone">Task description</label>
+				        </div>
+				      </div>
+				    </form>
+				 
+
+				<form action="#" id="form_priority">
+					<div class="task_priority">
+						<p class="task_priority__cursive">
+							<label>
+								<span class="task_priority__title">Choose priority:</span>
+							</label>
+						</p>
+
+						<p>
+					      <label>
+					        <input name="low" type="radio" />
+					        <span class="task_priority__low">low</span>
+					      </label>
+					    </p>
+					    <p>
+					      <label>
+					        <input name="middle" type="radio" />
+					        <span  class="task_priority__middle">middle</span>
+					      </label>
+					    </p>
+					    <p>
+					      <label>
+					        <input name="high" type="radio" />
+					        <span  class="task_priority__high">high</span>
+					      </label>
+					    </p>
+
+				    </div>
+				    <div class="divider"></div>
+<!-- 				    <div class="deadline">
+				    	<label for="deadline_date">access_time</label>
+				    	<input type="text" class="datepicker" id="deadline_date" placeholder="Deadline">
+				    </div> -->
+			  </form>
+		<div class="buttons">
+			<div class="buttons_section__1">
+			    <div id="add_task" >Add</div>
+			    <div id="clear_tasks" >Clear All</div>
+		    </div>
+		    <div class="buttons_section__2">
+			    <div id="sort_by_name">Sort by name</div>
+			    <div id="sort_by_priority">Sort by priority</div>
+		    </div>
+	    </div>
+
+	    <div class="divider"></div>
+	    		<div class="tasks">
+			<div class="tasks_todo">
+				<!-- <ol class="tasks_todo__item">All Tasks</ol> -->
+				      <table id="task_table" class="highlight">
+				        <thead>
+				          <tr>
+				              <th>Task Name</th>
+				              <th>Task description</th>
+				              <th>Priority</th>
+				              <th>Date</th>
+				              <th>Time</th>
+				              <th></th>
+				          </tr>
+				        </thead>
+
+				        <tbody id = "tasks_table__body"></tbody>
+				      </table>
+			</div>
+<!-- 			<div class="tasks_progress">
+				<ol class="tasks_progress__item">In Progress</ol>
+			</div>
+			<div class="tasks_finished">
+				<ol class="tasks_finished__item">Finished</ol>
+			</div> -->
+		</div>
+		</div>
+
+    </div>
+      
+    
+</div>
+    <script src="libs/jquery-1.12.4.min.js"></script>
+    <script src="libs/materialize.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
