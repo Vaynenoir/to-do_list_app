@@ -24,6 +24,7 @@ $(document).ready(function(){
       dataArray.sortOn('task_name');
       restore_data();
       tasks_to_delete();
+      console.log(dataArray);
   });
 
   $("#sort_by_priority").on("click", function(){
@@ -32,6 +33,7 @@ $(document).ready(function(){
       dataArray.sortOn('priority_index');
       restore_data();
       tasks_to_delete();
+      console.log(dataArray);
   });
 
   function tasks_to_delete(){
@@ -113,8 +115,7 @@ $(document).ready(function(){
             alert("no priority, please add!");
             valid = 0;
           }
-          console.log(task, task_description, checkedRadio);
-          console.log(checkedRadio);
+
 
            if(task == "" || task_description == "" ){
             alert("please enter text");
@@ -151,9 +152,9 @@ $(document).ready(function(){
               if (checkedRadio == "low") {
                 dataObject.priority_index = "C";
               }                            
-              console.log(dataObject);
 
               dataArray.push(dataObject);
+              console.log(dataArray);
               localStorage.setItem('data', JSON.stringify(dataArray));
               refresh();
            }
@@ -176,7 +177,6 @@ $(document).ready(function(){
       var checkedRadio = $(this).prop('checked', true);
       var radio_name = $(this).attr("name");
       $(this).addClass("checked_item");
-      console.log(radio_name);
    });
 
    $('#clear_tasks').on('click', function(){
